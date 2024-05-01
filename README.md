@@ -36,8 +36,8 @@ This Django project is a simple currency calculator that allows users to convert
 
 ## Credits
 
-This project was created by [Your Name]. It is open-source and contributions are welcome.
+This project was created by [Liam🪔](https://twitter.com/w__Liam). It is open-source and contributions are welcome.
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+This project is licensed under the [LIAM 🪔](https://twitter.com/w__Liam).
