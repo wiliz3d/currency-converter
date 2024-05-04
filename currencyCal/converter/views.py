@@ -43,10 +43,6 @@ def home(request):
     
 #     return render(request, 'home.html', {'currency_options': currency_options})
 
-# # Rest of your view functions...
-
-
-
 
 def convert_currency(request):
     if request.method == 'POST':
@@ -55,7 +51,7 @@ def convert_currency(request):
         to_currency = request.POST['to_currency']
 
         # Call an external API to get currency exchange rates
-        api_key = '6fff097d8ca1d4052c9364f9'  # Replace with your actual API key
+        api_key = '6fff097d8ca1d4052c9364f9' 
         url = f'https://v6.exchangerate-api.com/v6/{api_key}/latest/USD/{from_currency}'
         response = requests.get(url)
 
@@ -95,36 +91,3 @@ def convert_currency(request):
         # If request method is not POST, redirect to the home page
         return render(request, 'home.html')
 
-
-
-
-
-# def convert_currency(request):
-#     if request.method == 'POST':
-#         amount = float(request.POST['amount'])
-#         from_currency = request.POST['from_currency']
-#         to_currency = request.POST['to_currency']
-
-#         # Call an external API to get currency exchange rates
-#         api_key = ' 6fff097d8ca1d4052c9364f9'  # Replace with your actual API key
-#         url = f'https://v6.exchangerate-api.com/v6/6fff097d8ca1d4052c9364f9/latest/USD/{from_currency}'
-#         response = requests.get(url)
-#         data = response.json()
-
-#         # Print JSON response for debugging
-#         print(data)
-
-#         # Calculate the converted amount
-#         if to_currency in data['rates']:
-#             exchange_rate = data['rates'][to_currency]
-#             converted_amount = amount * exchange_rate
-#             context = {'amount': amount, 'from_currency': from_currency,
-#                        'to_currency': to_currency, 'converted_amount': converted_amount}
-#             return render(request, 'result.html', context)
-#         else:
-#             error_message = f"Currency code '{to_currency}' not found."
-#             return render(request, 'currency_converter/home.html', {'error_message': error_message})
-
-#     else:
-#         # If request method is not POST, redirect to the home page
-#         return render(request, 'shome.html')
