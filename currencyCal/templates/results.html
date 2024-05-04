@@ -1,0 +1,28 @@
+<!-- currency_converter/templates/currency_converter/result.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter - Result</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="mb-4">Conversion Result</h2>
+                <p><strong>Amount:</strong> {{ amount }}</p>
+                <p><strong>From Currency:</strong> {{ from_currency }}</p>
+                <p><strong>To Currency:</strong> {{ to_currency }}</p>
+                <p><strong>Converted Amount:</strong> {{ converted_amount }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS (optional) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
